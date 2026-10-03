@@ -39,7 +39,7 @@ ACCESS_MIN = int(os.getenv("ACCESS_TOKEN_MINUTES", "30"))
 REFRESH_DAYS = int(os.getenv("REFRESH_TOKEN_DAYS", "30"))
 
 # CORS: env se padho, comma-separated. Fallback to localhost:5173 + 3000.
-_raw_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000")
+_raw_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000,https://vibestream.42web.io/")
 CORS_ORIGINS = [o.strip() for o in _raw_origins.split(",") if o.strip()]
 
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
