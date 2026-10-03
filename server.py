@@ -70,7 +70,7 @@ app = FastAPI(title="Audio App API", lifespan=lifespan, default_response_class=O
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=CORS_ORIGINS,
+    allow_origins=['*'],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
